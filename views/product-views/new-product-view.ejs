@@ -1,0 +1,22 @@
+<h2>Add a Product</h2>
+
+<form class="productSubmit" action="/products" method="post">
+  <label class = "product_name" for="product-name-input">Name of Product</label>
+  <input id= "product-name-input" type="text" name="productName">
+                                      <!-- req.body.productName -->
+  <br>
+
+  <label class= "product_price" for="product-price-input">Price</label>
+  <input id="product-price-input" type="number" name="productPrice">
+  <br>
+
+  <label class="product_image" for="product-image-input">Image URL</label>
+  <input id="product-image-input" type="url" name="productImageUrl">
+  <br>
+
+  <label class="product_description" for="product-description-input">Description</label>
+  <textarea id="product-description-input" name="productDescription"></textarea>
+  <br>
+
+  <button class= "submit_btn" type="submit" name="button">Add this Product</button>
+</form>

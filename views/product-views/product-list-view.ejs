@@ -3,8 +3,17 @@
 <ul>
   <%productsAndStuff.forEach((oneProduct) => {%>
     <li>
-      <h3><%=oneProduct.name%></h3>
+      <a class = "details" href="/products/details?myId=<%= oneProduct._id %>">
+        <h3><%=oneProduct.name%></h3>
+      </a>
       <p>$ <%=oneProduct.price%></p>
+      <img src="<%=oneProduct.imageUrl%>">
+      <br>
+      <a class= "details border hvr-grow-shadow" href="/products/edit?myId=<%= oneProduct._id %>">Edit</a>
+      <br>
+      <!-- can do a link to delete or a form to delete -->
+                                                        <!-- req.query.myId -->
+      <a class= "details border hvr-grow-shadow" href="/products/delete?myId=<%= oneProduct._id %>">Delete</a>
     </li>
   <%});%>
 </ul>

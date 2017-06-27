@@ -8,13 +8,15 @@ const myProductSchema = new Schema({
   imageUrl: {type: String, default: '/images/product.gif'},
   description: {type: String}
 });
-
+//Model
+//  constructor function that allows us to interact with a single collection
  const Product = mongoose.model('Product', myProductSchema);
-
+//                                  |
+//   --------------------------------
+//   |
+// 'Product'  ->   'products'  ->   db.products.find()
+//
 //Collection name is automatically determined by mongoose
-//--------------------------------------------------------
-//Product -> products -> db.products.find()
-
 
 
 //DON'T FORGET THIS OR IT WILL NOT WORK
